@@ -7,5 +7,5 @@ is also possible to re-build the document by compiling the `.tex` file.
 
 ## Contact
 
-__Email__: ljvmiranda@gmail.com
-__Linkedin__: [lesterjamesmiranda](https://www.linkedin.com/in/lesterjamesmiranda/)
+- __Email__: ljvmiranda@gmail.com
+- __Linkedin__: [lesterjamesmiranda](https://www.linkedin.com/in/lesterjamesmiranda/)
