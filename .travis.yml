@@ -1,0 +1,9 @@
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+
+script:
+  - pdflatex LMiranda.tex
+  - bibtex LMiranda.tex
+  - pdflatex LMiranda.tex
+  - pdflatex LMiranda.tex
