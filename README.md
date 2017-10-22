@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-[![download PDF](https://img.shields.io/badge/download-PDF-brightgreen.svg)](https://ljvmiranda921.github.io/downloads/LMiranda.pdf)
+[![download PDF](https://img.shields.io/badge/download-PDF-brightgreen.svg)](https://github.com/ljvmiranda921/cv/raw/master/LMiranda.pdf)
 
 This repository contains the Curriculum Vitae of Lester James V. Miranda. His list of publications can be seen
 in `./publications.bib`. You can view the readable version of this document by clicking the `./LMiranda.pdf` file.
