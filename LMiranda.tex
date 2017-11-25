@@ -9,8 +9,8 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
-\moderncvstyle{classic}
-\moderncvcolor{burgundy}
+\moderncvstyle{banking}
+\moderncvcolor{black}
 
 % character encoding
 \usepackage[utf8]{inputenc}                     % set encoding
@@ -20,22 +20,25 @@
 \usepackage{xcolor}                             % better colors
 \usepackage{color}                              % syntactic sugar
 
-\setlength{\makecvheadnamewidth}{12cm}
+% \setlength{\makecvheadnamewidth}{12cm}
 \renewcommand*{\namefont}{\fontsize{24}{29}\mdseries\upshape}
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
 % personal data
-\name{Lester James V.}{Miranda}
-%\title{Curriculum vit\ae}
-\address{Fukuoka, Japan}
+\firstname{Lester James V.}
+\familyname{Miranda}
+% \title{Curriculum vit\ae}
+\address{Blk. 12 Lot 16, Palmera Northwinds I}{City of San Jose del Monte, Bulacan}
 \email{ljvmiranda@gmail.com}
 \homepage{ljvmiranda921.github.io}
+\mobile{(+63) 926-6481383}
+\extrainfo{Currently based in Fukuoka, Japan}
+
 
 \begin{document}
 
-\vspace*{-6mm}
 \maketitle
-\vspace*{-6mm}
+
 
 % EDUCATION ------------------------------------------------------------
 \section{Education}
@@ -59,24 +62,65 @@
 
 % EXPERIENCE -----------------------------------------------------------
 \section{Experience}
-\cventry{2015}{Intern}{Manila Electric Company}{Pasig City}{}{}{}
-\vspace{-.1cm}
-\cvline{}
-{\begin{itemize} 
-    \item Developed use-cases for Big Data and drone automation.
-    \item Studied the business impact of Enterprise Mobility in the company.
-    \item Presented the results of the study to MERALCO's top executives.
-\end{itemize}}
-\vspace{-.5cm}
 
-\cventry{2015}{Intern}{Simbahang Lingkod ng Bayan}{Quezon City}{}{}{}
-\vspace{-.1cm}
-\cvline{}
-{\begin{itemize}
-    \item Assessed the organization's disaster reporting platform, e-Ugnay.
-    \item Proposed improvements for platform security and scalability.
-\end{itemize}}
-\vspace{-.5cm}
+\cventry{2017}
+        {Research Intern}
+        {RIKEN-Advanced Institute for Computational Sciences}
+        {Kobe, Japan}{Data Assimilation Research Team}
+        {
+            \begin{itemize}
+                \item Developed...
+                \item Studied... 
+            \end{itemize}
+        }
+
+\cventry{2015}
+        {Intern}
+        {Manila Electric Company}
+        {Pasig, Philippines}{Strategy, Architecture \& Governance}
+        {
+            \begin{itemize}
+                \item Developed use-cases for Big Data and drone automation.
+                \item Studied the business impact of Enterprise Mobility in the company.
+                \item Presented the results of the study to MERALCO's top executives.
+            \end{itemize}
+        }
+
+\vspace{0.75em}
+\cventry{2015}
+        {Intern}
+        {Simbahang Lingkod ng Bayan}
+        {Quezon City, Philippines}{Disaster Risk Reduction \& Management}
+        {
+            \begin{itemize}
+                \item Assessed the organization's disaster reporting platform, e-Ugnay.
+                \item Proposed improvements for platform security and scalability.
+            \end{itemize}
+        }
+
+
+% PROJECTS -------------------------------------------------------------
+\section{Projects}
+
+\cventry{2017}
+        {Owner, https://github.com/ljvmiranda921/pyswarms}
+        {PySwarms}{}{}
+        {
+            \begin{itemize}
+                \item Research toolkit for particle swarm optimization written in Python.
+                \item Repository can be found at {\color{blue} \httplink[GitHub]{github.com/ljvmiranda921/pyswarms}}, with {\color{blue}\httplink[API documentation]{pyswarms.readthedocs.io/en/latest/}}
+            \end{itemize}
+        }
+
+\cventry{2017}
+        {Collaborator, https://github.com/scikit-multilearn/scikit-multilearn}
+        {scikit-multilearn}{}{}
+        {
+            \begin{itemize}
+                \item A scikit-compatible library for multi-label classification in Python
+                \item Reorganized unit tests and fixed repository documentation.
+            \end{itemize}
+        }
 
 % SCHOLARSHIP ----------------------------------------------------------
 \section{Scholarships Received}
@@ -84,19 +128,6 @@
 \cvitem{2015}{French Embassy Government Scholarship}
 \cvitem{2011}{Department of Science \& Technology SEI Merit Scholarship}
 \cvitem{2011}{Ateneo College Scholarship, 100 Tuition and Fees}
-
-% PROJECTS -------------------------------------------------------------
-\section{Projects}
-\cventry{2017}{PySwarms}{a research-toolkit for Particle Swarm Optimization}{}{}{}
-\vspace{-.1cm}
-\cvline{}
-{\begin{itemize}
-    \item Swarm intelligence library with various optimization techniques.
-    \item Developed in Python and available at {\color{blue}\httplink[PyPI]{pypi.python.org/pypi/pyswarms}}
-    \item Repository can be found at {\color{blue} \httplink[GitHub]{github.com/ljvmiranda921/pyswarms}}, with {\color{blue}\httplink[API documentation]{pyswarms.readthedocs.io/en/latest/}}
-\end{itemize}}
-\vspace{-.5cm}
-
 
 % SKILLS ---------------------------------------------------------------
 \section{Skills}
@@ -106,7 +137,6 @@
 \cvlanguage{Miscellaneous}{Proficient}{UNIX/Linux, \LaTeX, Jekyll, HTML/CSS/Javascript}
 
 
-\newpage
 % BIBLIOGRAPHY ---------------------------------------------------------
 \nocite{*}
 \bibliographystyle{ieeetr}
