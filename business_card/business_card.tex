@@ -1,0 +1,47 @@
+% Create a simple one-sided business card
+% Adapted from http://tex.stackexchange.com/users/6200/petrichor
+\documentclass[10pt]{letter}
+  
+% load ticket.sty with the appropriate ticket definition
+\usepackage[zw32010,crossmark]{ticket}
+\usepackage{libertine}
+\usepackage{fontawesome}
+\usepackage{graphicx}
+\usepackage{color}
+
+% define color (black for now)
+\definecolor{maroon}{RGB}{80,0,0}
+
+% add 1-inch margin above
+\addtolength{\topmargin}{1in}
+
+% redefine default ticket command to do nothing.
+\renewcommand{\ticketdefault}{%
+}
+
+% define card structure
+\newcommand{\vcardfront}[0]{\ticket{%
+\ticketNumbers{2}{4}
+    \put(5.5,45){\bfseries\LARGE Lester James V. Miranda}
+    \put(7, 39){Graduate student, Waseda University}
+    \put(7, 35){Furuzuki Neurocomputing Systems Laboratory}
+    \put(7,32){\color{maroon}\line(1,0){76}}
+    \put(7,27){\textit{machine learning---bioinformatics---data science}}
+    \put(7,23){{\small\faEnvelopeO}~~lester.miranda@toki.waseda.jp}
+    \put(7,19){\faGlobe~~ljvmiranda921.github.io}
+    \put(7,16){\color{maroon}\line(1,0){76}}
+    \put(7, 3){\includegraphics[width=45mm]{wasedaIPS}}
+  }}
+
+% define a counter
+\newcounter{numcards}
+
+\begin{document}
+\sffamily
+
+% print eight cards
+\whiledo{\thenumcards<8}{%
+  \stepcounter{numcards}%
+  \vcardfront}
+  
+\end{document}
