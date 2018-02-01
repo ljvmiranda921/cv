@@ -1,0 +1,134 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+
+% moderncv themes
+\moderncvstyle{banking}
+\moderncvcolor{black}
+
+% character encoding
+\usepackage[utf8]{inputenc}                     % set encoding
+\usepackage[scale=0.75]{geometry}               % customize paper
+\usepackage[mono=false]{libertine}              % beautiful font
+\usepackage[unicode]{hyperref}                  % to use hyperlinks
+\usepackage{CJKutf8}                            % japanese fonts
+\usepackage{xcolor}                             % better colors
+\usepackage{color}                              % syntactic sugar
+
+% \setlength{\makecvheadnamewidth}{12cm}
+\renewcommand*{\namefont}{\fontsize{24}{29}\mdseries\upshape}
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+% personal data
+\firstname{Lester James V.}
+\familyname{Miranda}
+% \title{Curriculum vit\ae}
+\address{Blk. 12 Lot 16, Palmera Northwinds I}{City of San Jose del Monte, Bulacan}
+\email{ljvmiranda@gmail.com}
+\homepage{ljvmiranda921.github.io}
+\extrainfo{Last update: \today}
+
+\begin{document}
+
+\maketitle
+
+
+% EDUCATION ------------------------------------------------------------
+\section{Education}
+\cventry{2016--present}
+        {M.Eng., Major in Information Architecture}
+        {Waseda University (\begin{CJK}{UTF8}{min}早稲田大学)\end{CJK} }
+        {Fukuoka, Japan}{}
+        {Furuzuki Neurocomputing Systems}
+
+\cventry{2011--2016}{B.S., Electronics \& Communications Engineering}
+        {Ateneo de Manila University}
+        {Quezon City, Philippines}
+        {\textit{Cum Laude}}
+        {Minor in Philosophy}
+
+\cventry{2015}
+        {Exchange Student, Fall Semester}
+        {Institut Catholique d'Arts et M\'etiers}
+        {Lille, France}{}
+        {7 ECTS credits}
+
+% EXPERIENCE -----------------------------------------------------------
+\section{Experience}
+
+\cventry{2018}
+        {Research Intern}
+        {RIKEN (\begin{CJK}{UTF8}{min}理化学研究所\end{CJK})}
+        {Kobe, Japan}{Advanced Institute for Computational Sciences}
+        {
+            \begin{itemize}
+                \item Implemented data assimilation techniques (3Dvar, 4Dvar, EnKF) to the Lorenz63 model.
+                \item Participated in the RIKEN International School on Data Assimilation with support grant.
+            \end{itemize}
+        }
+
+\cventry{2015}
+        {Intern}
+        {Manila Electric Company (MERALCO)}
+        {Pasig, Philippines}{Strategy, Architecture \& Governance}
+        {
+            \begin{itemize}
+                \item Developed business use-cases for 3rd IT Computing Platform Technologies.
+                \item Presented the use-cases (big data analytics, enterprise mobility, drone automation)\\ to MERALCO's top executives.
+            \end{itemize}
+        }
+
+\cventry{2015}
+        {Intern}
+        {Simbahang Lingkod ng Bayan}
+        {Quezon City, Philippines}{Disaster Risk Reduction \& Management}
+        {
+            \begin{itemize}
+                \item Assessed the organization's disaster reporting platform, e-Ugnay.
+                \item Proposed improvements for platform security and scalability.
+            \end{itemize}
+        }
+
+
+% PROJECTS -------------------------------------------------------------
+\section{Projects}
+
+\cventry{2017}
+        {Owner, https://github.com/ljvmiranda921/pyswarms}
+        {PySwarms}{}{}
+        {
+            \begin{itemize}
+                \item Research toolkit for particle swarm optimization written in Python.
+                \item Repository can be found at {\color{blue} \httplink[GitHub]{github.com/ljvmiranda921/pyswarms}}, with {\color{blue}\httplink[API documentation]{pyswarms.readthedocs.io/en/latest/}}
+            \end{itemize}
+        }
+
+\cventry{2017}
+        {Collaborator, https://github.com/scikit-multilearn/scikit-multilearn}
+        {scikit-multilearn}{}{}
+        {
+            \begin{itemize}
+                \item A scikit-compatible library for multi-label classification in Python
+                \item Reorganized unit tests and fixed repository documentation.
+            \end{itemize}
+        }
+
+% SCHOLARSHIP ----------------------------------------------------------
+\section{Scholarships Received}
+\cvlanguage{}{Monbugakusho (MEXT) Japanese Government Scholarship}{2016}
+\cvlanguage{}{French Ministry of Foreign and European Affairs Grant}{2015}
+\cvlanguage{}{Department of Science \& Technology SEI Merit Scholarship}{2011}
+\cvlanguage{}{Ateneo College Scholarship, 100 Tuition and Fees}{2011}
+% BIBLIOGRAPHY ---------------------------------------------------------
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{publications}
+
+\end{document}
