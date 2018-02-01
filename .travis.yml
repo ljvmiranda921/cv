@@ -8,8 +8,4 @@ before_install:
 - sudo tlmgr install collection-fontsrecommended moderncv libertine cjk xcolor graphics fontawesome
 
 script:
-- mkdir _build
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
-- bibtex _build/LJMiranda_CV
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
+- make latex COMPILER=xelatex
