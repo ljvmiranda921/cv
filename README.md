@@ -2,6 +2,8 @@
 
 [![download PDF](https://img.shields.io/badge/download-PDF-brightgreen.svg)](https://ljvmiranda921.github.io/downloads/LMiranda.pdf)
 
+[![Build Status](https://travis-ci.org/ljvmiranda921/cv.svg?branch=master)](https://travis-ci.org/ljvmiranda921/cv)
+
 - __Email__: ljvmiranda@gmail.com
 - __Linkedin__: [lesterjamesmiranda](https://www.linkedin.com/in/lesterjamesmiranda/)
 
