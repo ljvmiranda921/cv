@@ -4,14 +4,22 @@
 [![Build Status](https://travis-ci.org/ljvmiranda921/cv.svg?branch=master)](https://travis-ci.org/ljvmiranda921/cv)
 
 This repository contains the Curriculum Vitae of Lester James V. Miranda. To build
-this file, simply run the following commands:
+this file, simply run the following command:
 
 ```shell
-$ mkdir _build
-$ xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
-$ bibtex _build/LJMiranda_CV
-$ xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
-$ xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex 
+$ make latex
+```
+This will build the file in a directory called `_build`. You can change this directory by passing an argument to
+the `make` command:
+
+```shell
+$ make latex BUILDDIR=new_dir
+```
+In some distributions, particularly in trusty, some compilation error happens when using `pdflatex`. In these cases,
+use the `xelatex` compiler. Again, you can set this as an argument to the `make` command:
+
+```shell
+$ make latex COMPILER=xelatex
 ```
 
 ## Dependencies
