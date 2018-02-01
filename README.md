@@ -1,16 +1,12 @@
 # Curriculum Vitae
 
 [![download PDF](https://img.shields.io/badge/download-PDF-brightgreen.svg)](https://ljvmiranda921.github.io/downloads/LMiranda.pdf)
-
 [![Build Status](https://travis-ci.org/ljvmiranda921/cv.svg?branch=master)](https://travis-ci.org/ljvmiranda921/cv)
-
-- __Email__: ljvmiranda@gmail.com
-- __Linkedin__: [lesterjamesmiranda](https://www.linkedin.com/in/lesterjamesmiranda/)
 
 This repository contains the Curriculum Vitae of Lester James V. Miranda. To build
 this file, simply run the following commands:
 
-```s
+```shell
 $ mkdir _build
 $ xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
 $ bibtex _build/LJMiranda_CV
@@ -30,5 +26,8 @@ can be installed by typing `tlmgr install package-name`:
 - `cjk`: for Japanese characters
 - `xcolor`: for blue colors in live links
 
+## Contact
 
+- Email: ljvmiranda@gmail.com
+- Linkedin: [lesterjamesmiranda](https://www.linkedin.com/in/lesterjamesmiranda/)
 
