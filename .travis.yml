@@ -1,0 +1,15 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
+- sudo apt-get install -y xzdec
+- sudo tlmgr init-usertree
+- sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final 
+- sudo tlmgr install collection-fontsrecommended moderncv libertine cjk xcolor graphics fontawesome
+
+script:
+- mkdir _build
+- xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
+- bibtex _build/LJMiranda_CV
+- xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
+- xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build LJMiranda_CV.tex
