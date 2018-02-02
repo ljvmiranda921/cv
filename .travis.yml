@@ -15,6 +15,7 @@ deploy:
   api_key:
     secure: fqYMtUXPPcT9XG5yd/FXfHfzMKyoHOXhcMjA8cSLKC38RIgcn0Z4jqDbqxbKyDYnWqJKwu3k5t7UTRLD6FBuG9u4drZ6bHEj5zJxyoaJImKmoUH5rr0eEY8+s1HaRLlmhg15ZMv15kYicl0pv8jJaTnK6nRbeLtxT7wKpI4prrQqnLM3ABi8Fc41IYMfit5YTgBnFVvW2SqwwLZBrDDkLfjLaY1+an4YCzeT51bd6+MzwaSNfQvQCu3UP6QX2aKoCdXDN9a2V/8fKUbG5C/0ZQKNvA3pjedjAOGrWbCOhIGlPu4XGd3XIwtTgEwiQORu9YTMuX++e3o/m1b4SP4GQfIg46juXhZfP7jRiB4fm3tCJ9oHvk0G8GE3BxqkD6M+ays4la1mD7lid0ZjFANBjvIZ6y/Xu9/zYnKCA2huI7BkM7MRcqGZB0aK0ZVG5dmZODORxYCB93Gall9P3La+Jr77BKCnp964lvZenQxiwyIX2bYaku6u06Ys64FXcB5vs63od8rsEBds0rUp77tw1AfoHGj0Hx8LWF9Qlc1qlFHBDup/k25xIm2e0F61sdajwicWw/bIGnWv89V3ZwXaM9zkr5+uTFA0dqEp3wqjSGElu4l2/wKRc66WzXFJX5KyTBbvigR+qUu07//8iPVelb0pLIAwrNkILCtujMi3Y/o=
   file: _build/LJMiranda_CV.pdf
+  skip_cleanup: true
   on:
     repo: ljvmiranda921/cv
     tags: true
