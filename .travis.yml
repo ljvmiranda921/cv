@@ -4,7 +4,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_820d65973a75_key -iv $encrypted_820d65973a75_iv -in .dropbox_uploader.enc -out ~/.dropbox_uploader -d
 - ./tlsetup.sh
 script:
-- make latex COMPILER=pdflatex
+- make latex COMPILER=xelatex
 - ./dropbox_uploader.sh upload _build/LJMiranda_CV.pdf ${TRAVIS_BRANCH}/LJMiranda_CV-latest.pdf
 - ./dropbox_uploader.sh upload _build/LJMiranda_CV.pdf ${TRAVIS_BRANCH}/LJMiranda_CV-${TRAVIS_JOB_NUMBER}.pdf
 deploy:
