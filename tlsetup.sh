@@ -35,9 +35,7 @@ sudo apt-get install -y --no-install-recommends texlive-fonts-recommended \
     texlive-fonts-extra       \
     dvipng                    \
     texlive-latex-recommended \
-    texlive-xetex             \
-    latex-cjk-japanese-wadalab\
-    latex-cjk-japanese
+    texlive-xetex
 
 # Install decompression tool to extract LaTex packages later on
 sudo apt-get install -y xzdec
@@ -59,7 +57,6 @@ sudo tlmgr install              \
     collection-fontsrecommended \
     moderncv                    \
     libertine                   \
-    cjk                         \
     xcolor                      \
     graphics                    \
     fontawesome
