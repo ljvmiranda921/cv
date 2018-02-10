@@ -61,4 +61,5 @@ sudo tlmgr install              \
     libertine                   \
     cjk                         \
     xcolor                      \
-    graphics
+    graphics                    \
+    fontawesome
