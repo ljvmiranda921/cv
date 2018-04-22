@@ -7,29 +7,36 @@
 
 This repository contains the Curriculum Vitae of Lester James V. Miranda. The
 compiled PDF is automatically deployed to Dropbox, where you can download from
-the link above. To manually build this file, simply clone this repository and
-run the following command:
+the link above.
+
+My cv is being compiled using a LaTeX Docker container from
+[blang/latex](https://hub.docker.com/r/blang/latex/). To manually build this
+file, simply download the command wrapper and compile via
+[latexmk](http://mg.readthedocs.io/latexmk.html).
+
+First, clone this repository and download the command wrapper:
 
 ```shell
-$ make latex
+$ git clone https://github.com/ljvmiranda921/cv.git
+$ wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
+$ chmod +x latexdockercmd.sh
 ```
-This will build the file in a directory called `_build`. You can change this
-directory by passing an argument to the `make` command:
+Then, compile via `latexmk`:
 
 ```shell
-$ make latex BUILDDIR=new_dir
-```
-Compilation error happens when using `pdflatex` with the `fontspec` package.
-To resolve this, use the `xelatex` compiler. Again, you can set this as an
-argument to the `make` command:
-
-```shell
-$ make latex COMPILER=xelatex
+$ ./latexdockercmd.sh latexmk -pdf -outdir=./_build
 ```
 
-If you are interested to know more about my continuous integration and deployment
-workflow, checkout my [blog post](https://ljvmiranda921.github.io/notebook/2018/02/04/continuous-integration-for-latex/).
-I wrote about how to integrate LaTeX with Travis-CI to deploy artifacts to Dropbox.
+This will build the file in a directory called `_build`.
+
+If you are interested to know more about my continuous integration and
+deployment workflow, checkout my [blog
+post](https://ljvmiranda921.github.io/notebook/2018/02/04/continuous-integration-for-latex/).
+I wrote about how to integrate LaTeX with Travis-CI to deploy artifacts to
+Dropbox.
+
+_(Recently, I followed a more improved approach involving Docker containers. You can still
+check the blog post above, but I will be writing another one that incorporates Docker)_
 
 ## Dependencies
 
