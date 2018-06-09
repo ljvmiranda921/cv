@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[12pt,a4paper,sans]{moderncv}
 
 
 % moderncv themes
@@ -16,22 +16,28 @@
 % character encoding
 \usepackage[utf8]{inputenc}                     % set encoding
 \usepackage[scale=0.75]{geometry}               % customize paper
-\usepackage[mono=false]{libertine}              % beautiful font
 \usepackage[unicode]{hyperref}                  % to use hyperlinks
 \usepackage{xcolor}                             % better colors
 \usepackage{color}                              % syntactic sugar
 
-% \setlength{\makecvheadnamewidth}{12cm}
-\renewcommand*{\namefont}{\fontsize{24}{29}\mdseries\upshape}
+% Setup bib formatting
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
-% personal data
+% Setup fonts
+\renewcommand*{\namefont}{\fontsize{24}{29}\mdseries\upshape}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Setup bullet points
+\renewcommand{\labelitemi}{\scriptsize\color{black}{$\bullet$}}
+
+
+% PERSONAL DATA --------------------------------------------------------
 \firstname{Lester James V.}
 \familyname{Miranda}
-% \title{Curriculum vit\ae}
-\address{Blk. 12 Lot 16, Palmera Northwinds I}{City of San Jose del Monte, Bulacan}
+\address{Kitakyushu-shi, Wakamatsu-ku, 1-15-4309 Hibikino, Fukuoka-ken, Japan}
 \email{ljvmiranda@gmail.com}
 \homepage{ljvmiranda921.github.io}
+\social[github]{ljvmiranda921}
 \extrainfo{Last update: \today}
 
 \begin{document}
@@ -45,7 +51,7 @@
         {M.Eng., Major in Information Architecture}
         {Waseda University}
         {Fukuoka, Japan}{}
-        {Furuzuki Neurocomputing Systems}
+        {}
 
 \cventry{2011--2016}{B.S., Electronics \& Communications Engineering}
         {Ateneo de Manila University}
@@ -53,80 +59,77 @@
         {\textit{Cum Laude}}
         {Minor in Philosophy}
 
-\cventry{2015}
+\cventry{Sep 2015 -- Jan 2016}
         {Exchange Student, Fall Semester}
         {Institut Catholique d'Arts et M\'etiers}
         {Lille, France}{}
-        {7 ECTS credits}
+        {}
+
+% MASTER THESIS --------------------------------------------------------
+\section{Master Thesis}
+% The spacing here is better than using \cventry
+\textbf{Title}: \emph{Autoencoder-based Feature Extraction Techniques for Protein Function Prediction}\\
+\textbf{Supervisor}: Dr. Jinglu Hu (Furuzuki Takayuki)\\
+\textbf{Laboratory}: {\color{blue}\httplink[Furuzuki Neurocomputing Systems Laboratory]{www.waseda.jp/sem-hflab/nclab/index.html}}\\
+\textbf{Description}: We designed a mutually-competitive autoencoder architecture that learns
+task-relevant representations of protein data to improve the prediction of protein functions.
+We tested on \textit{S. cerevisiae} (yeast) and Genbase protein benchmarks and outperformed other
+techniques in literature.
 
 % EXPERIENCE -----------------------------------------------------------
-\section{Experience}
+\section{Work Experience}
 
-\cventry{2018}
+\cventry{Jan 2018}
         {Research Intern}
         {RIKEN}
         {Kobe, Japan}{Center for Computational Sciences}
         {
-            \begin{itemize}
-                \item Implemented data assimilation techniques (3Dvar, 4Dvar, EnKF) to the Lorenz63 model.
-                \item Participated in the RIKEN International School on Data Assimilation with support grant.
-            \end{itemize}
+        Implemented data assimilation techniques such as 3Dvar,
+        4Dvar and Ensemble Kalman Filters (EnKF) to the Lorenz63 model
+        for weather simulation. Participated in the RIKEN International
+        School on Data Assimilation with support grant (one-week).
         }
 
-\cventry{2015}
+\cventry{Apr 2015 -- May 2015}
         {Intern}
         {Manila Electric Company (MERALCO)}
         {Pasig, Philippines}{Strategy, Architecture \& Governance}
         {
-            \begin{itemize}
-                \item Developed business use-cases for 3rd IT Computing Platform Technologies.
-                \item Presented the use-cases (big data analytics, enterprise mobility, drone automation)\\ to MERALCO's top executives.
-            \end{itemize}
+        Developed business use-cases for 3rd IT Computing Platform
+        Technologies (big data analytics, enterprise mobility, and drone
+        automation) and presented it to MERALCO's top executives.
         }
 
-\cventry{2015}
-        {Intern}
-        {Simbahang Lingkod ng Bayan}
-        {Quezon City, Philippines}{Disaster Risk Reduction \& Management}
-        {
-            \begin{itemize}
-                \item Assessed the organization's disaster reporting platform, e-Ugnay.
-                \item Proposed improvements for platform security and scalability.
-            \end{itemize}
-        }
-
-
+\newpage
 % PROJECTS -------------------------------------------------------------
-\section{Projects}
+\section{Selected Projects}
 
 \cventry{2018}
-        {Owner, https://github.com/ljvmiranda921/gym-lattice}
-        {gym-lattice}{}{}
+        {\color{blue} \httplink[ljvmiranda921/gym-lattice]{github.com/ljvmiranda921/gym-lattice}}
+        {Gym-Lattice}{}{}
         {
-            \begin{itemize}
-                \item Reinforcement learning environment for the protein
-                    folding problem. 
-            \end{itemize}
+        A Python library that provides a reinforcement learning environment
+        to solve the protein folding problem. Creates an OpenAI gym-like
+        interface of the HP-Lattice structure in statistical mechanics.
         }
 
 \cventry{2017}
-        {Owner, https://github.com/ljvmiranda921/pyswarms}
+        {\color{blue} \httplink[ljvmiranda921/pyswarms]{github.com/ljvmiranda921/pyswarms}}
         {PySwarms}{}{}
         {
-            \begin{itemize}
-                \item Research toolkit for particle swarm optimization written in Python.
-                \item Repository can be found at {\color{blue} \httplink[GitHub]{github.com/ljvmiranda921/pyswarms}}, with {\color{blue}\httplink[API documentation]{pyswarms.readthedocs.io/en/latest/}}
-            \end{itemize}
+        A Python-based framework for implementing swarm optimization
+        algorithms. Features include visualization and hyperparameter
+        optimization. Software paper was published in the Journal of Open
+        Source Software (JOSS).
         }
 
 \cventry{2017}
-        {Collaborator, https://github.com/scikit-multilearn/scikit-multilearn}
-        {scikit-multilearn}{}{}
+        {\color{blue} \httplink[scikit-multilearn]{github.com/scikit-multilearn/scikit-multilearn}}
+        {Scikit-Multilearn}{}{}
         {
-            \begin{itemize}
-                \item A scikit-compatible library for multi-label classification in Python
-                \item Reorganized unit tests and fixed repository documentation.
-            \end{itemize}
+        A Python library that provides a \texttt{scikit-learn} interface for
+        multilabel classification. Role: Collaborator. Responsibilities include
+        resolving issues and updating library documentation.
         }
 
 % SCHOLARSHIP ----------------------------------------------------------
