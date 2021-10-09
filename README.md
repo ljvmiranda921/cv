@@ -29,26 +29,6 @@ $ ./latexdockercmd.sh latexmk -pdf -outdir=./_build
 
 This will build the file in a directory called `_build`.
 
-If you are interested to know more about my continuous integration and
-deployment workflow, checkout my [blog
-post](https://ljvmiranda921.github.io/notebook/2018/02/04/continuous-integration-for-latex/).
-I wrote about how to integrate LaTeX with Travis-CI to deploy artifacts to
-Dropbox.
-
-_(Recently, I followed a more improved approach involving Docker containers. You can still
-check the blog post above, but I will be writing another one that incorporates Docker)_
-
-## Dependencies
-
-This document is dependent on the [TexLive 2015 Distribution](ftp://tug.org/historic/systems/texlive/2015/). You can find the
-install sequence in `tlsetup.sh`. It uses the following CTAN packages which
-can be installed by typing `tlmgr install package-name`:
-
-- [moderncv](https://ctan.org/pkg/moderncv?lang=en): base package for cv theme and format
-- [fontawesome](https://ctan.org/pkg/fontawesome?lang=en): for web-related social icons in the header
-- [libertine](https://ctan.org/pkg/libertine): for Linux Libertine font family
-- [xcolor](https://ctan.org/pkg/xcolor): for blue colors in live links
-
 ## Contact
 
 - Email: ljvmiranda@gmail.com
