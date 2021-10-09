@@ -1,0 +1,17 @@
+name: Upload PDF to GCS
+on: push
+jobs:
+  upload_pdf:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://blang/latex:ubuntu
+        with:
+          args: latexmk -pdf -outdir=./_build
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          version: '290.0.1'
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - run: gsutil cp _build/LJMiranda_CV.pdf gs://ljvmiranda/cv.pdf
+
