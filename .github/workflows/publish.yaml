@@ -1,10 +1,10 @@
-name: Upload PDF to GCS
+name: Publish
 on:
   push:
     branches: 
       - master
 jobs:
-  upload_pdf:
+  publish:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
