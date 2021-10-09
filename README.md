@@ -15,3 +15,4 @@ $ docker run --rm \
 ```
 
 This will generate the PDF file in the `_build` directory.
+Alternatively, you can download my CV from [this link](https://storage.googleapis.com/ljvmiranda/cv.pdf).
