@@ -4,7 +4,7 @@
 
 My CV uses the [blang/latex Docker image](https://hub.docker.com/r/blang/latex)
 to compile the TeX document into PDF.  To compile, first clone this repository
-and execute the command wrapper:
+and execute the following command:
 
 ```shell
 $ git clone https://github.com/ljvmiranda921/cv.git
