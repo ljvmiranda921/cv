@@ -22,9 +22,11 @@
 % Font settings
 \usepackage[T1]{fontenc}
 % Serif body font
-\usepackage{charter}
+% \usepackage{charter}
+\usepackage{libertine}
 % Math font
-\usepackage[charter]{mathdesign}
+\usepackage{libertinust1math}
+% \usepackage[charter]{mathdesign}
 % Monospaced font
 \usepackage{sourcecodepro}
 % Sans-serif font
@@ -59,6 +61,7 @@
 
 % EXPERIENCE -----------------------------------------------------------
 \section{Experience}
+
 \cventry{Oct 2021 -- present}
 {Machine Learning Engineer}
 {Explosion}
@@ -80,45 +83,38 @@
     \vspace{3px}
     \textit{Client Projects}
     \begin{itemize}
-        \item Developed multiple machine learning products for a major investment firm
-            in Singapore including an internal search engine using BERT, 
-            an OCR-based document processing tool for PDFs, and a Bloomberg industry
+        \item Developed several machine learning applications for a major
+            investment firm in Singapore. This includes a BERT-based semantic search
+            engine, an OCR tool for PDFs, and an industry
             classifier. (Feb 2019 -- Jul 2021)
         \item As Tech Lead, mentored a project team to deliver a large-scale
             digitization project of all LGUs across the country for the World Bank.
             (Jul 2020 -- Sep 2020)
-        \item Developed a computer vision-based household detection model for
-            one of the largest telecommunications player in the Philippines to
-            aid their capex investments. (Oct 2018 -- Jun 2019)
     \end{itemize}
     \vspace{3px}
     \textit{Internal Efforts}
     \begin{itemize}
-        \item As Team Lead for the Document Processing Team, streamlined
-            research and engineering efforts in the computer-vision and data processing
-            space to enable fast delivery and execution of our
+        \item As Team Lead, managed
+            research and engineering efforts in the document processing
+            space for the 
             {\color{blue}\httplink[DocumentAI]{https://thinkingmachin.es/our-solutions/\#documentIntelligence}}
             product. (Apr 2020 -- Jun 2021)
-        \item Led the company's open-source initiatives through
-            company-wide strategy, internal training sessions, co-development
-            of open-source projects, and public talks. More information can be
-            found at {\color{blue}
-            \httplink[thinkingmachin.es/open-tm]{thinkingmachin.es/open-tm}}
     \end{itemize}
 }
 
 % INTERNSHIPS -----------------------------------------------------------
 \subsection{Internships}
-
 \cventry{Aug 2018 -- Sep 2018}
 {Research Intern}
 {Preferred Networks, Inc.}
 {Japan}{ChainerRL Team}
 {
     \begin{itemize}
-        \item Developed a reinforcement learning parallelization
-              framework based on batch Proximal Policy Optimization (PPO)
-              for the open-source ChainerRL library.
+        \item Developed a reinforcement learning parallelization framework
+            based on batch Proximal Policy Optimization (PPO) for the
+            open-source
+            {\color{blue}\httplink[ChainerRL]{github.com/chainer/chainerrl}}
+            library.
     \end{itemize}
 }
 
@@ -179,18 +175,16 @@
     \httplink[thinkingmachines/geomancer]{github.com/thinkingmachines/geomancer}}
 {Geomancer}{}{}
 {
-    A Python library to automate feature engineering of geospatial data. It
-    harnesses a geospatial data source like OpenStreetMap (OSM) and a data
-    warehouse like BigQuery. Created while working in Thinking Machines.
+    A Python library to automate feature engineering of geospatial data. Uses
+    OpenStreetMap (OSM) and BigQuery. Developed at Thinking Machines.
 }
 
 \cventry{2018}
 {\color{blue} \httplink[ljvmiranda921/gym-lattice]{github.com/ljvmiranda921/gym-lattice}}
 {Gym-Lattice}{}{}
 {
-    A Python library that provides a reinforcement learning environment
-    to solve the protein folding problem. Creates an OpenAI gym-like
-    interface of the HP-Lattice structure in statistical mechanics.
+    A reinforcement learning environment for the protein folding problem based
+    on the HP-lattice structure.
 }
 
 \cventry{2017}
