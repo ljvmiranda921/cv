@@ -1,5 +1,8 @@
 name: Upload PDF to GCS
-on: push
+on:
+  push:
+    branches: 
+      - master
 jobs:
   upload_pdf:
     runs-on: ubuntu-18.04
