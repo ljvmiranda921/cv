@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-[![download PDF](https://img.shields.io/badge/download-PDF-brightgreen.svg)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
+[![build](https://github.com/ljvmiranda921/cv/actions/workflows/publish.yaml/badge.svg)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 
 My CV uses the [blang/latex Docker image](https://hub.docker.com/r/blang/latex)
 to compile the TeX document into PDF.  To compile, first clone this repository
