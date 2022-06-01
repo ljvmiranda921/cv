@@ -11,7 +11,7 @@ jobs:
       - uses: docker://blang/latex:ubuntu
         with:
           args: latexmk -pdf -outdir=./_build
-      - uses: google-github-actions/setup-gcloud@master
+      - uses: google-github-actions/setup-gcloud@v0
         with:
           version: '290.0.1'
           service_account_key: ${{ secrets.GCP_SA_KEY }}
