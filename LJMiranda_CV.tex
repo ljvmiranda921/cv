@@ -13,23 +13,17 @@
 \moderncvstyle{banking}
 \moderncvcolor{black}
 
-% character encoding
 \usepackage[utf8]{inputenc}                     % set encoding
 \usepackage[scale=0.75]{geometry}               % customize paper
 \usepackage[unicode]{hyperref}                  % to use hyperlinks
 \usepackage{xcolor}                             % better colors
 \usepackage{color}                              % syntactic sugar
-% Font settings
 \usepackage[T1]{fontenc}
-% Serif body font
 % \usepackage{charter}
 \usepackage{libertine}
-% Math font
 %\usepackage{libertinust1math}
 % \usepackage[charter]{mathdesign}
-% Monospaced font
-\usepackage{sourcecodepro}
-% Sans-serif font
+\usepackage[scale=0.875]{sourcecodepro}
 %\usepackage[lf]{FiraSans}
 
 % Setup bib formatting
@@ -46,12 +40,11 @@
 % PERSONAL DATA --------------------------------------------------------
 \firstname{Lester James V.}
 \familyname{Miranda}
-\address{Metro Manila, Philippines}
+% \address{Metro Manila, Philippines}
 \email{ljvmiranda@gmail.com}
-%\mobile{(+63)905-258-1624}
 \homepage{ljvmiranda921.github.io}
 \social[github]{ljvmiranda921}
-\extrainfo{Last updated: \today}
+\extrainfo{Last updated: October 30, 2023} % \today
 
 \title{CV}
 
@@ -59,75 +52,72 @@
 
 \maketitle
 
+\textsc{Summary}: Lj Miranda specializes in natural language processing with over five years of
+experience in consulting, open-source software development, and research. 
 
 % EXPERIENCE -----------------------------------------------------------
 \section{Experience}
 
-\cventry{Oct 2021 -- present}
-{Machine Learning Engineer}
-{Explosion GmbH}
-{Berlin}{spaCy Team}
+\cventry{Oct 2023 -- present}
+{Predoctoral Young Investigator}
+{Allen Institute for AI}
+{Seattle, US}{AllenNLP Team}
 {
     \begin{itemize}
-        \item Co-authored spaCy's first technical paper, \textit{Multi-hash
+        \item As a {\color{blue}\httplink[predoctoral
+        researcher]{allenai.org/predoctoral-young-investigators}}, conducts
+        cutting-edge research in the field of natural language processing (NLP) and computational linguistics.
+        % Research areas: efficient NLP and corpus linguistics.
+    \end{itemize}
+}
+\vspace{0.5em}
+
+\cventry{Oct 2021 -- July 2023}
+{Machine Learning Engineer}
+{ExplosionAI GmbH}
+{Berlin, DE}{spaCy Team}
+{
+    \begin{itemize}
+        \item Authored spaCy's first technical paper, \textit{Multi-hash
         embeddings in spaCy}, that benchmarks the library's hash-embedding trick
         (first-author).
-        \item Improved spaCy's {\color{blue}\httplink[Span Categorization
-        (SpanCat)]{explosion.ai/blog/spancat}} component for sequence tagging by
-        adding new features, writing documentation, and benchmarking
-        performance.
-        \item Developed annotation workflows for our data annotation product,
-        {\color{blue}\httplink[Prodigy]{prodi.gy}}, that integrates
-        large language models like GPT-3 to common natural language processing
-        tasks (e.g. named-entity recognition, text classification, etc.).  
-        \item Co-developed
-        {\color{blue}\httplink[spacy-llm]{github.com/explosion/spacy-llm}}, a
-        framework for using large language models in production.
-        \item Authored several {\color{blue}\httplink[spaCy
-        projects]{github.com/explosion/projects}} on span labeling,
-        data augmentation, low-resource benchmarking, experimentation, and more.
+        \item Developed annotation workflows for a data annotation product,
+        {\color{blue}\httplink[Prodigy]{prodi.gy}}, that integrates large
+        language models (LLM) like GPT-3.5/4 to common natural language processing tasks.
+        \item Improved spaCy's sequence labeling component,
+        {\color{blue}\httplink[Span Categorizer]{explosion.ai/blog/spancat}}, by
+        adding new features, writing documentation, performing benchmark
+        experiments, and optimizing performance.
+        \item Co-developed several open-source software NLP libraries and
+        developer tools including 
+        {\color{blue}\httplink[spacy-llm]{github.com/explosion/spacy-llm}}
+        (production LLM pipelines),
+        {\color{blue}\httplink[vscode-prodigy]{github.com/explosion/vscode-prodigy}}
+        (Visual Studio Code extension for data annotation), and
+        {\color{blue}\httplink[spaCy projects]{github.com/explosion/projects}}
+        (end-to-end NLP workflows for production).
     \end{itemize}
 }
 \vspace{0.5em}
 
 \cventry{Oct 2018 -- Jul 2021}
 {Machine Learning Researcher}
-{Thinking Machines Data Science}
-{Metro Manila}{Machine Learning Team}
+{Thinking Machines Data Science, Inc.}
+{Metro Manila, PH}{Machine Learning Team}
 {
-    \vspace{3px}
-    \textit{Client Projects}
     \begin{itemize}
-        \item Developed several production-grade machine learning applications
-            for a major investment firm in Singapore (Feb 2019 -- Jul 2021): 
-            \begin{itemize}
-                \item A semantic search engine for an in-house mobile
-                    application based on natural language processing and
-                    Transformer (DistilBERT, RoBERTa) techniques. 
-                \item A document processing tool powered by natural language
-                    processing and optical character recognition (OCR) for an
-                    in-house application to automate report management.
-                \item An industry classifier using natural language processing
-                    and multilabel / hierarchical classification to
-                    streamline portfolio risk assessment. 
-            \end{itemize}
-        \item As Tech Lead, mentored a project team to deliver a {\color{blue}
-            \httplink[large-scale
-            digitization project]{stories.thinkingmachin.es/doc-ai-world-bank-case-study/}} of all LGU financial statements across the
-            country for The World Bank.  (Jul 2020 -- Sep 2020)
-        \item Applied computer vision techniques such as Mask R-CNN and Faster
-        R-CNN to automate {\color{blue}\httplink[building detection from aerial
+        \item Developed several production-grade natural language processing
+        applications for a major investment firm in Singapore, ranging from
+        in-house search engines to document processing tools.
+        \item As Tech Lead, led a project team to deliver a {\color{blue}
+        \httplink[large-scale digitization
+        project]{stories.thinkingmachin.es/doc-ai-world-bank-case-study/}} of
+        all the local governments' financial statements across the country for
+        The World Bank.
+        \item Automated {\color{blue}\httplink[building detection from aerial
         images]{stories.thinkingmachin.es/wealth-detection-satellite-image/}}
-        for one of the largest telecommunications companies in the Philippines.
-        (Oct 2018 -- Feb 2019)
-    \end{itemize}
-    \vspace{3px}
-    \textit{Internal Efforts}
-    \begin{itemize}
-        \item As Team Lead, managed a team of six in various research and
-            engineering efforts in the document processing space for the
-            {\color{blue}\httplink[DocumentAI]{thinkingmachin.es/solutions/\#documentIntelligence}}
-            product. (Apr 2020 -- Jun 2021)
+        for one of the largest telecommunications companies in the Philippines
+        using computer vision techniques.
     \end{itemize}
 }
 \vspace{0.5em}
@@ -137,7 +127,7 @@
 \cventry{Aug 2018 -- Sep 2018}
 {Research Intern}
 {Preferred Networks, Inc.}
-{Tokyo}{ChainerRL Team}
+{Tokyo, JP}{ChainerRL Team}
 {
     \begin{itemize}
         \item Developed a reinforcement learning parallelization framework
@@ -149,31 +139,19 @@
 }
 \vspace{0.5em}
 
-\cventry{Apr 2015 -- May 2015}
-{Intern}
-{Manila Electric Company}
-{Metro Manila}{Strategy, Architecture \& Governance Team}
-{
-    \begin{itemize}
-        \item Investigated use-cases for IT Computing platforms: big
-              data, mobility, \& drone automation.
-    \end{itemize}
-}
-
-
 % EDUCATION ------------------------------------------------------------
 \section{Education}
 \cventry{Sep 2016 -- Sep 2018}
 {M.Eng., Major in Information Architecture}
 {Waseda University}
-{Fukuoka}{}
+{Fukuoka, JP}{}
 {Thesis: Autoencoder-based Feature Extraction Techniques for Protein
     Function Prediction}
 \vspace{0.5em}
 
 \cventry{Jun 2011 -- Jun 2016}{B.S., Electronics \& Communications Engineering}
 {Ateneo de Manila University}
-{Metro Manila}
+{Metro Manila, PH}
 {\textit{Cum Laude}}
 {
     Thesis: Appliance Recognition using Hall-Effect Current Sensors for
@@ -188,33 +166,39 @@
 \cventry{Jan 2018}
 {Fellow}
 {RIKEN-Advanced Institute for Computational Sciences}
-{Kobe}{RIKEN International School for Data Assimilation}
+{Kobe, JP}{RIKEN International School for Data Assimilation}
 {Studied data assimilation techniques (3DVar, Kalman Filters, etc.) for real-time numerical simulations.}
 \vspace{0.5em}
 
 \cventry{Sep 2015 -- Jan 2016}
 {Exchange Student, Fall Semester}
 {Institut Catholique d'Arts et M\'etiers}
-{Lille}{}
+{Lille, FR}{}
 {Took courses in control systems and software development}
 
 % PROJECTS -------------------------------------------------------------
-\section{Selected Projects}
+\section{Open-source Software}
 
-\subsection{Open-Source Contributions}
+I've maintained several open-source projects in the scientific tooling space. 
+You can also visit my {\color{blue}\httplink[Github profile]{github.com/ljvmiranda921}} for more information.\\
 
-I've worked on several open-source projects, but below are my major open-source
-contributions. You can visit my {\color{blue}\httplink[Github
-profile]{github.com/ljvmiranda921}} for more information.
 
+\cventry{2023}
+{\color{blue}
+    \httplink[ljvmiranda921/calamanCy]{github.com/ljvmiranda921/calamanCy}}
+{calamanCy}{}{}
+{
+    A natural language processing toolkit for building Tagalog pipelines based on spaCy and written on Python.
+}
 
 \cventry{2021}
 {\color{blue}
     \httplink[explosion/spaCy]{github.com/explosion/spaCy}}
 {spaCy}{}{}
 {
-    An industrial-strength natural language processing (NLP) software. One of 
-    the core contributors as part of the spaCy team.
+    An industrial-strength natural language processing (NLP) software. 
+    I'm one of the core contributors as part of the spaCy team.
+    I also contributed to related software such as spacy-llm and spaCy projects.
 }
 
 \cventry{2017}
@@ -242,7 +226,7 @@ profile]{github.com/ljvmiranda921}} for more information.
 
 % BIBLIOGRAPHY ---------------------------------------------------------
 \nocite{*}
-\bibliographystyle{ieeetr}
+\bibliographystyle{unsrt}
 \bibliography{publications}
 
 \end{document}
