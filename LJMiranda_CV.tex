@@ -18,6 +18,7 @@
 \usepackage[unicode]{hyperref}                  % to use hyperlinks
 \usepackage{xcolor}                             % better colors
 \usepackage{color}                              % syntactic sugar
+\usepackage{natbib}
 \usepackage[T1]{fontenc}
 % \usepackage{charter}
 \usepackage{libertine}
@@ -36,6 +37,11 @@
 % Setup bullet points
 \renewcommand{\labelitemi}{\scriptsize\color{black}{$\bullet$}}
 
+\renewcommand{\bibpreamble}{
+    You can also check my {\color{blue}\httplink[Google 
+    Scholar]{scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}}
+    profile. Note: an asterisk (*) denotes equal contributions.
+}
 
 % PERSONAL DATA --------------------------------------------------------
 \firstname{Lester James V.}
