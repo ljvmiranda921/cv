@@ -1,238 +1,219 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+%-------------------------
+% Resume in Latex
+% Author : Lj Miranda 
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
+\documentclass[letterpaper,11pt]{article}
 
-\documentclass[12pt,a4paper]{moderncv}
-
-
-% moderncv themes
-\moderncvstyle{banking}
-\moderncvcolor{black}
-
-\usepackage[utf8]{inputenc}                     % set encoding
-\usepackage[scale=0.75]{geometry}               % customize paper
-\usepackage[unicode]{hyperref}                  % to use hyperlinks
-\usepackage{xcolor}                             % better colors
-\usepackage{color}                              % syntactic sugar
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
 \usepackage{natbib}
-\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
 % \usepackage{charter}
-\usepackage{libertine}
-%\usepackage{libertinust1math}
-% \usepackage[charter]{mathdesign}
-\usepackage[scale=0.875]{sourcecodepro}
-%\usepackage[lf]{FiraSans}
 
-% Setup bib formatting
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
-% Setup fonts
-\renewcommand*{\namefont}{\fontsize{24}{29}\mdseries\upshape}
-%\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Setup bullet points
-\renewcommand{\labelitemi}{\scriptsize\color{black}{$\bullet$}}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \renewcommand{\bibpreamble}{
-    You can also check my {\color{blue}\httplink[Google 
-    Scholar]{scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}}
-    profile. Note: an asterisk (*) denotes equal contributions.
+    You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar}
+    profile. Note: an asterisk (*) denotes equal or major contributions.
 }
 
-% PERSONAL DATA --------------------------------------------------------
-\firstname{Lester James V.}
-\familyname{Miranda}
-% \address{Metro Manila, Philippines}
-\email{ljvmiranda@gmail.com}
-\homepage{ljvmiranda921.github.io}
-\social[github]{ljvmiranda921}
-\extrainfo{Last updated: \today}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{CV}
 
 \begin{document}
+\renewcommand{\refname}{Publications}
 
-\maketitle
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
-\textsc{Summary}: Lj Miranda specializes in natural language processing with over five years of
-experience in consulting, open-source software development, and research.
+\begin{center}
+    \textbf{\Huge \scshape Lester James V. Miranda} \\ \vspace{1pt}
+    \href{mailto:ljvmiranda@gmail.com}{\underline{ljvmiranda@gmail.com}} $|$
+    \href{https://github.com/ljvmiranda921}{\underline{github.com/ljvmiranda921}}
+\end{center}
 
-% EXPERIENCE -----------------------------------------------------------
+
+%-----------EXPERIENCE-----------
 \section{Experience}
+\resumeSubHeadingListStart
 
-\cventry{Oct 2023 -- present}
-{Predoctoral Young Investigator}
-{Allen Institute for AI}
-{Seattle, US}{AllenNLP Team}
-{
-    \begin{itemize}
-        \item As a {\color{blue}\httplink[predoctoral
-                          researcher]{allenai.org/predoctoral-young-investigators}}, conducts
-              research broadly in large language model adaptation (preference data collection, reward model evaluation, etc.).
-              % Research areas: efficient NLP and corpus linguistics.
-    \end{itemize}
-}
-\vspace{0.5em}
+\resumeSubheading
+{Predoctoral Young Investigator}{Oct. 2023 -- Present}
+{Allen Institute for AI}{Seattle, WA}
+\resumeItemListStart
+\resumeItem{Conducts research broadly in large language model adaptation. Mentors: Pradeep Dasigi, Yanai Elazar}
+\resumeItemListEnd
 
-\cventry{Oct 2021 -- July 2023}
-{Machine Learning Engineer}
-{ExplosionAI GmbH}
-{Berlin, DE}{spaCy Team}
-{
-    \begin{itemize}
-        \item Authored spaCy's first technical paper, \textit{Multi-hash
-                  embeddings in spaCy}, that benchmarks the library's hash-embedding trick
-              (first-author).
-        \item Developed annotation workflows for a data annotation product,
-              {\color{blue}\httplink[Prodigy]{prodi.gy}}, that integrates large
-              language models (LLM) like GPT-3.5/4 to common natural language processing tasks.
-        \item Improved spaCy's sequence labeling component,
-              {\color{blue}\httplink[Span Categorizer]{explosion.ai/blog/spancat}}, by
-              adding new features, writing documentation, performing benchmark
-              experiments, and optimizing performance.
-        \item Co-developed several open-source software NLP libraries and
-              developer tools including
-                  {\color{blue}\httplink[spacy-llm]{github.com/explosion/spacy-llm}}
-              (production LLM pipelines),
-              {\color{blue}\httplink[vscode-prodigy]{github.com/explosion/vscode-prodigy}}
-              (Visual Studio Code extension for data annotation), and
-                  {\color{blue}\httplink[spaCy projects]{github.com/explosion/projects}}
-              (end-to-end NLP workflows for production).
-    \end{itemize}
-}
-\vspace{0.5em}
+\resumeSubheading
+{Machine Learning Engineer}{Oct. 2021 -- Jul. 2023}
+{Explosion AI, spaCy Team}{Berlin, DE}
+\resumeItemListStart
+\resumeItem{Authored spaCy's first technical paper that benchmarks the library's hash-embedding trick.}
+\resumeItem{Developed annotation workflows for Prodigy, a data annotation tool, that integrates LLMs in core NLP tasks.}
+\resumeItem{Improved spaCy's SpanCategorizer, a sequence labeling component, by adding new features and benchmarks.}
+\resumeItem{Developed several open-source NLP tools such as \href{https://github.com/explosion/spacy-llm}{spacy-llm} (production LLM pipelines), \href{https://github.com/explosion/vscode-prodigy}{vscode-prodigy} (VSCode extension for data annotation), and \href{https://github.com/explosion/projects}{spaCy projects} (end-to-end NLP workflows for production).}
+\resumeItemListEnd
 
-\cventry{Oct 2018 -- Jul 2021}
-{Machine Learning Researcher}
-{Thinking Machines Data Science, Inc.}
-{Metro Manila, PH}{Machine Learning Team}
-{
-    \begin{itemize}
-        \item Developed several production-grade natural language processing
-              applications for a major investment firm in Singapore, ranging from
-              in-house search engines to document processing tools.
-        \item As Tech Lead, led a project team to deliver a {\color{blue}
-                      \httplink[large-scale digitization
-                          project]{stories.thinkingmachin.es/doc-ai-world-bank-case-study/}} of
-              all the local governments' financial statements across the country for
-              The World Bank.
-        \item Automated {\color{blue}\httplink[building detection from aerial
-                  images]{stories.thinkingmachin.es/wealth-detection-satellite-image/}}
-              for one of the largest telecommunications companies in the Philippines
-              using computer vision techniques.
-    \end{itemize}
-}
-\vspace{0.5em}
+\resumeSubheading
+{Machine Learning Researcher}{Oct. 2018 -- Jul. 2021}
+{Thinking Machines Data Science}{Manila, PH}
+\resumeItemListStart
+\resumeItem{Developed several production-grade natural language processing applications for a major investment
+    firm in Singapore, ranging from in-house search engines to document processing tools.}
+\resumeItem{As Tech Lead, led a project team to deliver a large-scale digitization project of all the local governments' financial statements across the country for The World Bank.}
+\resumeItem{Automated building detection from aerial images for one of the largest telecommunications companies in the Philippines using computer vision techniques.}
+\resumeItemListEnd
 
-% INTERNSHIPS -----------------------------------------------------------
-\subsection{Internships}
-\cventry{Aug 2018 -- Sep 2018}
-{Research Intern}
-{Preferred Networks, Inc.}
-{Tokyo, JP}{ChainerRL Team}
-{
-    \begin{itemize}
-        \item Developed a reinforcement learning parallelization framework
-              based on batch Proximal Policy Optimization (PPO) for the
-              open-source
-              {\color{blue}\httplink[ChainerRL]{github.com/chainer/chainerrl}}
-              library.
-    \end{itemize}
-}
-\vspace{0.5em}
+\resumeSubheading
+{Research Intern}{Aug. 2018 -- Sep. 2018}
+{Preferred Networks}{Tokyo, JP}
+\resumeItemListStart
+\resumeItem{Developed a reinforcement learning parallelization framework based on batch Proximal Policy
+    Optimization (PPO) for the open-source ChainerRL library.}
+\resumeItemListEnd
 
-% EDUCATION ------------------------------------------------------------
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
 \section{Education}
-\cventry{Sep 2016 -- Sep 2018}
-{M.Eng., Major in Information Architecture}
-{Waseda University}
-{Fukuoka, JP}{}
-{Thesis: Autoencoder-based Feature Extraction Techniques for Protein
-    Function Prediction}
-\vspace{0.5em}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Waseda University}{Fukuoka, JP}
+{M.Eng. Information Architecture}{Sep. 2016 -- Sep 2018}
+\resumeItemListStart
+\resumeItem{Thesis: Autoencoder-based Feature Extraction Techniques for Protein Function Prediction}
+\resumeItem{Monbugakusho (MEXT) Japanese Government Scholarship}
+\resumeItemListEnd
 
-\cventry{Jun 2011 -- Jun 2016}{B.S., Electronics \& Communications Engineering}
-{Ateneo de Manila University}
-{Metro Manila, PH}
-{\textit{Cum Laude}}
-{
-    Thesis: Appliance Recognition using Hall-Effect Current Sensors for
-    Power Management Systems\\
-    Minor in Philosophy
-}
-\vspace{0.5em}
-
-
-\subsection{Fellowships}
-
-\cventry{Jan 2018}
-{Fellow}
-{RIKEN-Advanced Institute for Computational Sciences}
-{Kobe, JP}{RIKEN International School for Data Assimilation}
-{Studied data assimilation techniques (3DVar, Kalman Filters, etc.) for real-time numerical simulations.}
-\vspace{0.5em}
-
-\cventry{Sep 2015 -- Jan 2016}
-{Exchange Student, Fall Semester}
-{Institut Catholique d'Arts et M\'etiers}
-{Lille, FR}{}
-{Took courses in control systems and software development}
-
-% PROJECTS -------------------------------------------------------------
-\section{Open-source Software}
-
-I've maintained several open-source projects in the scientific tooling space.
-You can also visit my {\color{blue}\httplink[Github profile]{github.com/ljvmiranda921}} for more information.\\
+\resumeSubheading
+{Ateneo de Manila University}{Quezon City, PH}
+{B.S. Electronics and Communications Engineering, Minor in Philosophy, \textit{Cum Laude}}{Jun. 2011 -- Jun 2016}
+\resumeItemListStart
+\resumeItem{Thesis: Appliance Recognition using Hall-Effect Current Sensors for Power Management Systems}
+\resumeItem{Department of Science \& Technology (DOST) SEI Merit Scholarship}
+\resumeItem{Ateneo College Scholarship}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
-\cventry{2023}
-{\color{blue}
-    \httplink[ljvmiranda921/calamanCy]{github.com/ljvmiranda921/calamanCy}}
-{calamanCy}{}{}
-{
-    A natural language processing toolkit for building Tagalog pipelines based on spaCy and written on Python.
-}
-
-\cventry{2021}
-{\color{blue}
-    \httplink[explosion/spaCy]{github.com/explosion/spaCy}}
-{spaCy}{}{}
-{
-    An industrial-strength natural language processing (NLP) software.
-    I'm one of the core contributors as part of the spaCy team.
-    I also contributed to related software such as spacy-llm and spaCy projects.
-}
-
-\cventry{2017}
-{\color{blue} \httplink[ljvmiranda921/pyswarms]{github.com/ljvmiranda921/pyswarms}}
-{PySwarms}{}{}
-{
-    A Python-based framework for implementing swarm optimization
-    algorithms. Software paper was published in the \textit{Journal of Open
-        Source Software} (JOSS).
-}
-
-
-% AWARDS AND CERTIFICATIONS ----------------------------------------------------------
-\section{Awards and Certifications}
-
-\subsection{Professional Certifications}
-\cvlanguage{}{Google Cloud Professional Data Engineer (Certification ID: enjfUz)}{2018}
-
-\subsection{Scholarships}
-\cvlanguage{}{Monbugakusho (MEXT) Japanese Government Scholarship}{2016}
-\cvlanguage{}{French Ministry of Foreign and European Affairs Grant}{2015}
-\cvlanguage{}{Department of Science \& Technology SEI Merit Scholarship}{2011}
-\cvlanguage{}{Ateneo College Scholarship}{2011}
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{calamanCy} $|$ \emph{Python, spaCy, Transformers}}{Jul. 2023 -- Present}
+\resumeItemListStart
+\resumeItem{Developed a natural language processing toolkit for building Tagalog pipelines based on spaCy.}
+\resumeItem{Software paper was published in NLP-OSS workshop (EMNLP 2023).}
+\resumeItem{Corresponding NER dataset was published in SEALP workshop (IJCNLP-AACL 2023).}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{PySwarms} $|$ \emph{Python, numpy}}{May 2018 -- May 2020}
+\resumeItemListStart
+\resumeItem{Developed a Python-based framework for implementing swarm optimization algorithms.}
+\resumeItem{Software paper was published in the Journal of Open Source Software (JOSS).}
+\resumeItem{Has over 1k+ GitHub stars and used by over 300 repositories and packages.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
 % BIBLIOGRAPHY ---------------------------------------------------------
+\newpage
 \nocite{*}
 \bibliographystyle{unsrt}
 \bibliography{publications}
 
+
+%-------------------------------------------
 \end{document}
