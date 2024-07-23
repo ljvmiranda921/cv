@@ -15,11 +15,13 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{natbib}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true,urlcolor=darkblue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{xcolor}
 \input{glyphtounicode}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.5}
 
 
 %----------FONT OPTIONS----------
@@ -101,8 +103,10 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \renewcommand{\bibpreamble}{
-    You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar}
-    profile. Note: an asterisk (*) denotes equal or major contributions.
+    You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar profile}
+    (Scholar ID: \texttt{2RtnNKEAAAAJ})
+    for an updated list of my publications. 
+    Note: an asterisk (*) denotes equal or major contributions.
 }
 
 %-------------------------------------------
