@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker://blang/latex:ubuntu
         with:
-          args: latexmk -pdf -outdir=./_build
+          args: latexmk -pdf -biber -outdir=./_build
           steps:
       - name: "Authenticate GCloud"
         id: "auth"
