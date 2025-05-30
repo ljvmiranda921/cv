@@ -15,7 +15,7 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 % \usepackage[numbers,sort&compress]{natbib}
-\usepackage[style=numeric,sorting=nyt,backend=biber]{biblatex}
+\usepackage[backend=biber,style=numeric,defernumbers=true,minbibnames=7,maxbibnames=99]{biblatex}
 \usepackage[colorlinks=true,urlcolor=darkblue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -27,28 +27,7 @@
     colorlinks=true,
     citecolor=darkblue
 }
-
-\DeclareLabelalphaTemplate{
-  \labelelement{
-    \field[final]{labelprefix}
-  }
-  \labelelement{
-    \field{labelnumber}
-  }
-}
-
-% Auto-assign prefixes from 'category' field
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{
-    \map{
-      \step[fieldsource=category, final]
-      \step[fieldset=labelprefix, origfieldval]
-    }
-  }
-}
-
 \addbibresource{publications.bib}  
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -163,7 +142,7 @@
 {Allen Institute for AI}{2023 -- Present}
 {Predoctoral Young Investigator}{Seattle, WA}
 \resumeItemListStart
-\resumeItem{Conducts research in language model post-training, with several peer-reviewed publications \cite{lambert2024tulu,miranda2025hybrid,lambert-etal-2025-rewardbench}.}
+\resumeItem{Conducts research in language model post-training, with several peer-reviewed publications \cite{lambert2024tulu,lambert-etal-2025-rewardbench,miranda2025hybrid}.}
 \resumeItem{Mentors: Pradeep Dasigi, Yanai Elazar, Yizhong Wang}
 \resumeItemListEnd
 
@@ -202,7 +181,7 @@
 {Waseda University}{2016 -- 2018}
 {M.Eng. Information Architecture, Neurocomputing Systems Laboratory}{Fukuoka, JP}
 \resumeItemListStart
-\resumeItem{Thesis: Autoencoder-based Feature Extraction Techniques for Protein Function Prediction \cite{miranda2018feature,miranda2018deep}}
+\resumeItem{Thesis: Autoencoder-based Feature Extraction Techniques for Protein Function Prediction \cite{miranda2018deep,miranda2018feature}}
 \resumeItem{Supervisor: Jinglu Hu}
 % \resumeItem{Awards: Monbukagakusho (MEXT) Japanese Government Scholarship}
 \resumeItemListEnd
@@ -220,6 +199,8 @@
 %-----------AWARDS-----------
 \section{Awards \& Fellowships}
 \resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Cohere Labs Aya Expedition Silver Prize} (for M-RewardBench \cite{gureja2025mrewardbench}) $|$ \emph{Cohere Labs}}{2024}
 \resumeProjectHeading
 {\textbf{Monbukagakusho (MEXT) Japanese Government Scholarship} $|$ \emph{Waseda University}}{2016}
 \resumeProjectHeading
@@ -259,8 +240,23 @@
 \resumeSubHeadingListEnd
 
 
-\printbibliography
-
+\newpage
+You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar profile}
+(Scholar ID: \texttt{2RtnNKEAAAAJ})
+for an updated list of my publications.
+Note: an asterisk (*) denotes equal or major contributions.
+\nocite{*}
+{
+  \small
+  \newrefcontext[labelprefix=J]
+  \printbibliography[keyword=journal,title=Journal Publications]
+  \newrefcontext[labelprefix=C]
+  \printbibliography[keyword=conference,title=Conference Papers]
+  \newrefcontext[labelprefix=W]
+  \printbibliography[keyword=workshop,title=Workshop Papers]
+  \newrefcontext[labelprefix=P]
+  \printbibliography[keyword=preprint,title=Preprints \& Technical Reports]
+}
 
 % BIBLIOGRAPHY ---------------------------------------------------------
 % \newpage
