@@ -14,7 +14,8 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{natbib}
+% \usepackage[numbers,sort&compress]{natbib}
+\usepackage[style=numeric,sorting=nyt,backend=biber]{biblatex}
 \usepackage[colorlinks=true,urlcolor=darkblue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -22,7 +23,31 @@
 \usepackage{xcolor}
 \input{glyphtounicode}
 \definecolor{darkblue}{rgb}{0.0, 0.0, 0.5}
+\hypersetup{
+    colorlinks=true,
+    citecolor=darkblue
+}
 
+\DeclareLabelalphaTemplate{
+  \labelelement{
+    \field[final]{labelprefix}
+  }
+  \labelelement{
+    \field{labelnumber}
+  }
+}
+
+% Auto-assign prefixes from 'category' field
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=category, final]
+      \step[fieldset=labelprefix, origfieldval]
+    }
+  }
+}
+
+\addbibresource{publications.bib}  
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -102,12 +127,12 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\renewcommand{\bibpreamble}{
-    You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar profile}
-    (Scholar ID: \texttt{2RtnNKEAAAAJ})
-    for an updated list of my publications. 
-    Note: an asterisk (*) denotes equal or major contributions.
-}
+% \renewcommand{\bibpreamble}{
+%     You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar profile}
+%     (Scholar ID: \texttt{2RtnNKEAAAAJ})
+%     for an updated list of my publications. 
+%     Note: an asterisk (*) denotes equal or major contributions.
+% }
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,33 +163,34 @@
 {Allen Institute for AI}{2023 -- Present}
 {Predoctoral Young Investigator}{Seattle, WA}
 \resumeItemListStart
-\resumeItem{Conducts research broadly in LLM post-training and alignment, such as preference annotation (\textsc{MultiPref}), reward model evaluation (\textsc{RewardBench}), and fully open-source post-training recipes (\textsc{T\"ulu 3}, \textsc{OLMo 2}).}
-% \resumeItem{Mentors: Pradeep Dasigi, Yanai Elazar, Yizhong Wang}
+\resumeItem{Conducts research in language model post-training, with several peer-reviewed publications \cite{lambert2024tulu,miranda2025hybrid,lambert-etal-2025-rewardbench}.}
+\resumeItem{Mentors: Pradeep Dasigi, Yanai Elazar, Yizhong Wang}
 \resumeItemListEnd
 
 \resumeSubheading
 {Explosion GmbH}{2021 -- 2023}
 {Machine Learning Engineer, spaCy Team}{Berlin, DE}
 \resumeItemListStart
-\resumeItem{Authored a technical paper on benchmarking spaCy's hash-embedding trick on span categorization and NER.}
-\resumeItem{Developed human-in-the-loop and LLM annotation workflows for Prodigy, our data annotation product.}
-\resumeItem{Built several open-source NLP tools such as \href{https://github.com/explosion/spacy-llm}{spacy-llm} (production LLM pipelines), \href{https://github.com/explosion/vscode-prodigy}{vscode-prodigy} (VSCode extension for data annotation), and \href{https://github.com/explosion/projects}{spaCy projects} (end-to-end NLP workflows for production).}
+\resumeItem{Software developer and researcher for the \href{https://spacy.io}{spaCy} NLP library and the \href{https://prodigy.ai}{Prodigy} annotation tool.}
+\resumeItem{Wrote a technical report on benchmarking spaCy's embeddings on span categorization tasks \cite{miranda2022multihash}.}
+% \resumeItem{Developed human-in-the-loop and LLM annotation workflows for Prodigy, our data annotation product.}
+% \resumeItem{Built several open-source NLP tools such as \href{https://github.com/explosion/spacy-llm}{spacy-llm} (production LLM pipelines), \href{https://github.com/explosion/vscode-prodigy}{vscode-prodigy} (VSCode extension for data annotation), and \href{https://github.com/explosion/projects}{spaCy projects} (end-to-end NLP workflows for production).}
 \resumeItemListEnd
 
 \resumeSubheading
 {Thinking Machines Data Science}{2018 -- 2021}
 {Machine Learning Researcher}{Metro Manila, PH}
 \resumeItemListStart
-\resumeItem{Developed several production-grade NLP applications for a sovereign wealth fund in Singapore.}
-\resumeItem{Led a team in a large-scale digitization project of government financial statements for The World Bank.}
-\resumeItem{Led an internal team of six in document processing initiatives to improve our Document AI product.}
+\resumeItem{Developed NLP products for clients in the financial and the utilities sector.}
+\resumeItem{Managed an internal research team for document processing.}
 \resumeItemListEnd
 
 \resumeSubheading
 {Preferred Networks}{2018}
 {Research Intern}{Tokyo, JP}
 \resumeItemListStart
-\resumeItem{Project: Implementing a parallelization feature for ChainerRL to support efficient batch Proximal Policy Optimization (PPO) and Advantage Actor Critic (A2C) for reinforcement learning.}
+\resumeItem{Developed a parallelized Advantage Actor Critic (A2C) algorithm for ChainerRL.}
+\resumeItem{Mentors: Yasuhiro Fujita, Toshiki Kataoka}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -176,19 +202,33 @@
 {Waseda University}{2016 -- 2018}
 {M.Eng. Information Architecture, Neurocomputing Systems Laboratory}{Fukuoka, JP}
 \resumeItemListStart
-\resumeItem{Thesis: Autoencoder-based Feature Extraction Techniques for Protein Function Prediction}
-\resumeItem{Awards: Monbukagakusho (MEXT) Japanese Government Scholarship}
+\resumeItem{Thesis: Autoencoder-based Feature Extraction Techniques for Protein Function Prediction \cite{miranda2018feature,miranda2018deep}}
+\resumeItem{Supervisor: Jinglu Hu}
+% \resumeItem{Awards: Monbukagakusho (MEXT) Japanese Government Scholarship}
 \resumeItemListEnd
 
 \resumeSubheading
 {Ateneo de Manila University}{2011 -- 2016}
 {B.S. Electronics and Communications Engineering, Minor in Philosophy (Cum Laude)}{Metro Manila, PH}
 \resumeItemListStart
-\resumeItem{Thesis: Appliance Recognition using Hall-Effect Current Sensors for Power Management Systems}
-\resumeItem{Awards: DOST-SEI Merit Scholarship, Ateneo College Scholarship}
+\resumeItem{Thesis: Appliance Recognition using Hall-Effect Current Sensors for Power Management Systems \cite{miranda2016appliance}}
+\resumeItem{Supervisors: Rosula S.J. Reyes, Matthew Dumlao}
+% \resumeItem{Awards: DOST-SEI Merit Scholarship, Ateneo College Scholarship}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+%-----------AWARDS-----------
+\section{Awards \& Fellowships}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Monbukagakusho (MEXT) Japanese Government Scholarship} $|$ \emph{Waseda University}}{2016}
+\resumeProjectHeading
+{\textbf{PhilFrance French Embassy Scholarship} $|$ \emph{Institut Catholique d'Arts et Métiers}}{2015}
+\resumeProjectHeading
+{\textbf{DOST-SEI Merit Scholarship} $|$ \emph{Ateneo de Manila University}}{2011}
+\resumeProjectHeading
+{\textbf{Ateneo College Scholarship} $|$ \emph{Ateneo de Manila University}}{2011}
+\resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Open-source Projects}
@@ -197,18 +237,17 @@
 {\textbf{calamanCy} $|$ \url{https://github.com/ljvmiranda921/calamanCy}}{2023}
 \resumeItemListStart
 \resumeItem{Natural language processing toolkit for building Tagalog pipelines based on spaCy.}
-\resumeItem{Software paper was published in the NLP-OSS workshop at EMNLP `23.}
-\resumeItem{Associated NER dataset was published in the SEALP workshop at IJCNLP-AACL `23.}
+\resumeItem{Published in several NLP conferences \cite{miranda2023calamancy,miranda2023developing}}
 \resumeItemListEnd
 \resumeProjectHeading
 {\textbf{PySwarms} $|$ \url{https://github.com/ljvmiranda921/pyswarms}}{2018}
 \resumeItemListStart
-\resumeItem{Python-based framework for implementing swarm optimization algorithms.}
-\resumeItem{Software paper was published in the Journal of Open Source Software (JOSS).}
-\resumeItem{Has over 1k+ GitHub stars and used by over 300 repositories and packages.}
+\resumeItem{Python-based framework for implementing swarm optimization algorithms (1k+ GitHub stars).}
+\resumeItem{Published in the Journal of Open Source Software \cite{miranda2018pyswarms}.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+%-----------PROJECTS-----------
 \section{Invited Talks}
 \resumeSubHeadingListStart
 \resumeProjectHeading
@@ -220,14 +259,16 @@
 \resumeSubHeadingListEnd
 
 
+\printbibliography
+
+
 % BIBLIOGRAPHY ---------------------------------------------------------
-\newpage
-\nocite{*}
-{
-  \small
-  \bibliographystyle{unsrt}
-  \bibliography{publications}
-}
+% \newpage
+% \nocite{*}
+% {
+%   \bibliographystyle{plain}
+%   \bibliography{publications}
+% }
 
 
 %-------------------------------------------
