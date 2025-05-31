@@ -6,7 +6,7 @@
 %------------------------
 
 \documentclass[a4paper,11pt]{article}
-
+\usepackage{fontawesome}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,6 +21,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{xcolor}
+\usepackage{lastpage}
 \input{glyphtounicode}
 \definecolor{darkblue}{rgb}{0.0, 0.0, 0.5}
 \hypersetup{
@@ -63,6 +64,8 @@
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\AtBeginBibliography{\small}
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -120,18 +123,18 @@
 \begin{document}
 \renewcommand{\refname}{Selected Publications}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
+% ----------HEADING----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Lester James V. Miranda} & \faEnvelopeO \ \href{mailto:ljvmiranda@gmail.com}{ljvmiranda@gmail.com}\\
+  \href{http://ljvmiranda921.github.io/}{https://ljvmiranda921.github.io} & \faGithub \  \href{https://github.com/ljvmiranda921}{ljvmiranda921} \\
+\end{tabular*}
 
-\begin{center}
-  \textbf{\Huge \scshape Lester James V. Miranda} \\ \vspace{1pt}
-  \href{mailto:ljvmiranda@gmail.com}{\underline{ljvmiranda@gmail.com}} $|$
-  \href{https://github.com/ljvmiranda921}{\underline{github.com/ljvmiranda921}} $|$
-  \href{https://ljvmiranda921.github.io}{\underline{ljvmiranda921.github.io}}
-\end{center}
+% \begin{center}
+%   \textbf{\Huge \scshape Lester James V. Miranda} \\ \vspace{1pt}
+%   \href{mailto:ljvmiranda@gmail.com}{\underline{ljvmiranda@gmail.com}} $|$
+%   \href{https://github.com/ljvmiranda921}{\underline{github.com/ljvmiranda921}} $|$
+%   \href{https://ljvmiranda921.github.io}{\underline{ljvmiranda921.github.io}}
+% \end{center}
 
 
 %-----------EXPERIENCE-----------
@@ -251,13 +254,14 @@
 % \resumeSubHeadingListEnd
 
 \newpage
-You can also check my \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{Google Scholar profile}
-(Scholar ID: \texttt{2RtnNKEAAAAJ})
-for an updated list of my publications.
-Note: an asterisk (*) denotes equal or major contributions.
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Selected Publications} & Google Scholar: \href{https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en}{2RtnNKEAAAAJ}\\
+  \textit{Note: (*) denotes equal / major contributions.} & Semantic Scholar: \href{https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871}{13614871} \\
+\end{tabular*}
+
 \nocite{*}
 {
-  \small
   \newrefcontext[labelprefix=J]
   \printbibliography[keyword=journal,title=Journal Publications]
   \newrefcontext[labelprefix=C]
