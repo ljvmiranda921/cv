@@ -8,7 +8,7 @@ and execute the following command:
 
 ```shell
 git clone https://github.com/ljvmiranda921/cv.git
-docker run --rm --interactive blang/latex:ubuntu latexmk -pdf -outdir=./_build
+docker run --rm --interactive arkark/latexmk latexmk -pdf -bibtex -outdir=./_build
 ```
 
 This will generate the PDF file in the `_build` directory.
